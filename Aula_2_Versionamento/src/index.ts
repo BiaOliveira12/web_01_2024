@@ -12,9 +12,6 @@ Vamos criar variáveis e objetos para representar diferentes tipos de dados rela
 
 */
 
-
-
-
 /*
 
 2 -Crie um objeto usuario com as seguintes propriedades:
@@ -28,7 +25,25 @@ Vamos criar variáveis e objetos para representar diferentes tipos de dados rela
     Em seguida, imprima todas as variáveis e propriedades do objeto usuario usando console.log.
 
 */
+let usuario: {
+    nome: string,
+    sobrenome: string,
+    idade: number,
+    contato: {
+        email: string,
+        telefone: string,
+    }
+};
 
+usuario = {
+    nome: "Beatriz",
+    sobrenome: "Oliveira",
+    idade: 18,
+    contato: {
+        email: "aguiarbeatriz12ba@gmail.com",
+        telefone: "234242353252",
+    }
+};
 
 /*
 
@@ -56,3 +71,32 @@ Precisamos armazenar informações sobre diferentes produtos disponíveis na loj
     Em seguida, imprima todas as variáveis e propriedades do objeto produto usando console.log.
 
 */
+
+type Contato = {
+    email: string,
+    telefone: string,
+};
+
+type Pessoa = {
+    nome: string,
+    sobrenome: string,
+    idade: number,
+    contato: Contato,
+};
+
+let contato1: Contato;
+contato1 = {
+    email: "aguiarbeatriz12ba@gmail.com",
+    telefone: "78218316371238"
+}
+
+let user: Pessoa;
+user = {
+    nome: "Beatriz",
+    sobrenome: "Oliveira",
+    idade: 18,
+    contato: {
+        email: "aguiarbeatriz12ba@gmail.com",
+        telefone: "2346246284284",
+    }
+}

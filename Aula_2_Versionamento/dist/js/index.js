@@ -12,10 +12,6 @@ Vamos criar variáveis e objetos para representar diferentes tipos de dados rela
     isAtivo: do tipo boolean, representando se o usuário está ativo ou não.
 
 */
-let nomeCompleto;
-let idade;
-let email;
-let isAtivo;
 /*
 
 2 -Crie um objeto usuario com as seguintes propriedades:
@@ -31,58 +27,26 @@ let isAtivo;
 */
 let usuario;
 usuario = {
-    nome: "Anisio",
-    sobrenome: "Silva",
-    idade: 23,
+    nome: "Beatriz",
+    sobrenome: "Oliveira",
+    idade: 18,
     contato: {
-        email: "anisio.silva@ifsp.com.br",
-        telefone: "1636248810"
+        email: "aguiarbeatriz12ba@gmail.com",
+        telefone: "234242353252",
     }
 };
-console.log("Dados do objeto usuário: ", usuario);
+let contato1;
+contato1 = {
+    email: "aguiarbeatriz12ba@gmail.com",
+    telefone: "78218316371238"
+};
 let user;
 user = {
-    nome: "Anisio",
-    sobrenome: "Silva",
-    idade: 23,
-    contato: { email: "anisio.silva@ifsp.com.br", telefone: "1636248810" }
+    nome: "Beatriz",
+    sobrenome: "Oliveira",
+    idade: 18,
+    contato: {
+        email: "aguiarbeatriz12ba@gmail.com",
+        telefone: "2346246284284",
+    }
 };
-console.log("Dados do Tipo Usuário: ", user);
-console.log("Contato do user: ", user.contato);
-console.log(typeof (user), typeof (usuario), user instanceof Object);
-/*
-
-Exercício:
-Vamos criar um sistema de gestão de produtos para uma loja online.
-Precisamos armazenar informações sobre diferentes produtos disponíveis na loja. Vamos criar variáveis e objetos para representar esses produtos.
-
-01 - Crie as seguintes variáveis primitivas:
-
-    nomeProduto: do tipo string, representando o nome de um produto.
-    preco: do tipo number, representando o preço do produto.
-    disponivel: do tipo boolean, representando se o produto está disponível em estoque ou não.
-*/
-let nomeProduto;
-let preco;
-let disponivel;
-/*
-
-02 - Crie um objeto produto com as seguintes propriedades:
-
-    nome: string, representando o nome do produto.
-    preco: number, representando o preço do produto.
-    estoque: number, representando a quantidade em estoque do produto.
-    categorias: array de strings, representando as categorias às quais o produto pertence.
-    Em seguida, imprima todas as variáveis e propriedades do objeto produto usando console.log.
-
-*/
-let produto;
-produto = {
-    nome: "geladeira",
-    preco: 1500.98,
-    estoque: 2,
-    categorias: ["linha branca"]
-};
-let product;
-product = ["Nome", 122, 2, ["teste"]];
-console.log(produto, product);
