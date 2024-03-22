@@ -1,36 +1,50 @@
 class Car {
-    private modelo: string;
-    private anoFabricacao: number;
+    private _nome:string;
+    private _cor:string;
+    private _ano:number;
+    private _anoAtual:number = new Date().getFullYear();
 
-    constructor(modelo: string, anoFabricacao: number) {
-        this.modelo = modelo;
-        this.anoFabricacao = anoFabricacao;
+    constructor(nome:string, cor:string, ano:number) {
+        this._nome = nome;
+        this._cor = cor;
+        this._ano = ano;   
     }
 
-    getModelo(): string {
-        return this.modelo;
+    get getNome():string {
+        return this._nome;
     }
 
-    setModelo(modelo: string): void {
-        this.modelo = modelo;
+    get getCor():string {
+        return this._cor;
     }
 
-    getAnoFabricacao(): number {
-        return this.anoFabricacao;
+    get getAno():number {
+        return this._ano;
     }
 
-    setAnoFabricacao(anoFabricacao: number): void {
-        this.anoFabricacao = anoFabricacao;
+    get getAnoAtual():number {
+        return this._anoAtual;
     }
 
-    calcularIdade(): number {
-        const anoAtual: number = new Date().getFullYear();
-        return anoAtual - this.anoFabricacao;
+    set setNome(nome:string) {
+        this._nome = nome;
     }
+    
+    set setCor(cor:string) {
+        this._cor = cor;
+    }
+
+    set setAno(ano:number) {
+        this._ano = ano;
+    }
+
+
+    calcularIdade():number {
+        return this._anoAtual - this._ano;
+    }
+    
+
 }
 
-const meuCar: Carro = new Carro("Fiat Uno", 2010);
-
-console.log("Modelo: " + meuCarro.getModelo());
-console.log("Ano de Fabricação: " + meuCarro.getAnoFabricacao());
-console.log("Idade do Carro: " + meuCarro.calcularIdade() + " anos");
+let c : Carro = new Carro("Gol", "Branco", 2010);
+console.log(c1.calcularIdade());

@@ -1,33 +1,35 @@
+"use strict";
 class Carro {
-    constructor(modelo, anoFabricacao) {
-        this.modelo = modelo;
-        this.anoFabricacao = anoFabricacao;
+    constructor(nome, cor, ano) {
+        this._anoAtual = new Date().getFullYear();
+        this._nome = nome;
+        this._cor = cor;
+        this._ano = ano;
     }
-
-    getModelo() {
-        return this.modelo;
+    get getNome() {
+        return this._nome;
     }
-
-    setModelo(modelo) {
-        this.modelo = modelo;
+    get getCor() {
+        return this._cor;
     }
-
-    getAnoFabricacao() {
-        return this.anoFabricacao;
+    get getAno() {
+        return this._ano;
     }
-
-    setAnoFabricacao(anoFabricacao) {
-        this.anoFabricacao = anoFabricacao;
+    get getAnoAtual() {
+        return this._anoAtual;
     }
-
+    set setNome(nome) {
+        this._nome = nome;
+    }
+    set setCor(cor) {
+        this._cor = cor;
+    }
+    set setAno(ano) {
+        this._ano = ano;
+    }
     calcularIdade() {
-        const anoAtual = new Date().getFullYear();
-        return anoAtual - this.anoFabricacao;
+        return this._anoAtual - this._ano;
     }
 }
-
-const meuCarro = new Carro("Fiat Uno", 2010);
-
-console.log("Modelo: " + meuCarro.getModelo());
-console.log("Ano de Fabricação: " + meuCarro.getAnoFabricacao());
-console.log("Idade do Carro: " + meuCarro.calcularIdade() + " anos");
+let c1 = new Carro("Gol", "Branco", 2010);
+console.log(c1.calcularIdade());

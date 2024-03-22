@@ -55,3 +55,12 @@ indicando que não há estoque suficiente.
 
 Certifique-se de que a classe lida corretamente com situações de erro, como tentar vender mais
 produtos do que há em estoque. Teste todos os métodos.
+
+
+## [Resolução exercicio 1](./src/Exercicio1.ts)
+
+
+## [Resolução exercicio 2](./src/Exercicio2.ts)
+
+
+## [Resolução exercicio 3](./src/Exercicio3.ts)
